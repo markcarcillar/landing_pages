@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>UrbanFusion - Modern and Stylish Clothing</title>
+	<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+</head>
+
+<body class="bg-gray-100">
+	<header class="bg-black py-6 px-4 shadow-md">
+		<div class="container mx-auto flex justify-between items-center">
+			<h1 class="text-2xl font-bold text-white">UrbanFusion</h1>
+			<nav class="hidden sm:flex">
+				<ul class="flex space-x-4">
+					<li><a href="#" class="text-white hover:text-gray-300">Home</a></li>
+					<li><a href="#" class="text-white hover:text-gray-300">Shop</a></li>
+					<li><a href="#" class="text-white hover:text-gray-300">About</a></li>
+					<li><a href="#" class="text-white hover:text-gray-300">Contact</a></li>
+				</ul>
+			</nav>
+			<button class="sm:hidden flex items-center" id="mobile-menu-toggle">
+				<svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+				</svg>
+			</button>
+		</div>
+		<nav class="sm:hidden" id="mobile-menu" style="display: none;">
+			<ul class="flex flex-col space-y-4 p-4">
+				<li><a href="#" class="text-white hover:text-gray-300">Home</a></li>
+				<li><a href="#" class="text-white hover:text-gray-300">Shop</a></li>
+				<li><a href="#" class="text-white hover:text-gray-300">About</a></li>
+				<li><a href="#" class="text-white hover:text-gray-300">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main class="py-20">
+		<section class="container mx-auto px-4">
+			<div class="text-center">
+				<h2 class="text-4xl font-bold text-gray-900 mb-8">Discover the Latest Styles</h2>
+				<p class="text-gray-600">Upgrade your wardrobe with our trendy and unique clothing collections.</p>
+			</div>
+			<div class="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+				<!-- Product Card 1 -->
+				<div class="bg-white shadow-md rounded overflow-hidden hover:bg-gray-100"> 
+          <img src="images/product-1.png" alt="Product 1" class="w-full h-64 object-cover">
+					<div class="p-6">
+						<h3 class="text-lg font-bold text-gray-800">Grow Through What You Go Through</h3>
+						<p class="text-gray-600">Our empowering message, printed boldly.</p>
+						<div class="mt-4"> <span class="text-xl font-bold text-gray-800">$49.99</span> <a href="#" class="ml-4 inline-block bg-black text-white py-2 px-4 rounded hover:bg-gray-800">Buy Now</a> </div>
+					</div>
+				</div>
+				<!-- Product Card 2 -->
+				<div class="bg-white shadow-md rounded overflow-hidden hover:bg-gray-100"> 
+          <img src="images/product-2.png" alt="Product 2" class="w-full h-64 object-cover">
+					<div class="p-6">
+						<h3 class="text-lg font-bold text-gray-800">Thanks For Everything</h3>
+						<p class="text-gray-600">Our gratitude message, displayed through stylish apparel.</p>
+						<div class="mt-4"> <span class="text-xl font-bold text-gray-800">$59.99</span> <a href="#" class="ml-4 inline-block bg-black text-white py-2 px-4 rounded hover:bg-gray-800">Buy Now</a> </div>
+					</div>
+				</div>
+				<!-- Product Card 3 -->
+				<div class="bg-white shadow-md rounded overflow-hidden hover:bg-gray-100"> 
+          <img src="images/product-3.png" alt="Product 3" class="w-full h-64 object-cover">
+					<div class="p-6">
+						<h3 class="text-lg font-bold text-gray-800">Positive</h3>
+						<p class="text-gray-600">Our optimistic message, woven into the latest fashion trends.</p>
+						<div class="mt-4"> <span class="text-xl font-bold text-gray-800">$69.99</span> <a href="#" class="ml-4 inline-block bg-black text-white py-2 px-4 rounded hover:bg-gray-800">Buy Now</a> </div>
+					</div>
+				</div>
+				<!-- Product Card 4 -->
+				<div class="bg-white shadow-md rounded overflow-hidden hover:bg-gray-100"> 
+          <img src="images/product-4.png" alt="Product 4" class="w-full h-64 object-cover">
+					<div class="p-6">
+						<h3 class="text-lg font-bold text-gray-800">Believe</h3>
+						<p class="text-gray-600">Our motivational message, inspiring confidence with stylish clothing.</p>
+						<div class="mt-4"> <span class="text-xl font-bold text-gray-800">$79.99</span> <a href="#" class="ml-4 inline-block bg-black text-white py-2 px-4 rounded hover:bg-gray-800">Buy Now</a> </div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="bg-black py-6 px-4 shadow-md mt-16">
+		<div class="container mx-auto text-center">
+			<p class="text-gray-300">&copy; 2023 UrbanFusion. All rights reserved.</p>
+		</div>
+	</footer>
+	<script>
+	document.getElementById('mobile-menu-toggle').addEventListener('click', () => {
+		const mobileMenu = document.getElementById('mobile-menu');
+		mobileMenu.style.display = mobileMenu.style.display === 'none' ? 'block' : 'none';
+	});
+	</script>
+</body>
+
+</html>
