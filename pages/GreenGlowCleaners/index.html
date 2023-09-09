@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <title>GreenGlow Cleaners</title>
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-green-100" style="font-family: 'Open Sans', sans-serif;">
+    <header class="bg-green-500 p-4">
+        <h1 class="text-4xl text-white font-semibold text-center">Welcome to GreenGlow Cleaners</h1>
+    </header>
+
+    <section class="container mx-auto mt-8 p-8 bg-white rounded-lg shadow-lg">
+        <h2 class="text-2xl font-semibold">Our Mission</h2>
+        <p class="mt-4 text-gray-700">
+            At GreenGlow Cleaners, our mission is to provide exceptional eco-friendly cleaning services that not only transform spaces but also contribute to a healthier, sustainable future. We are dedicated to using environmentally responsible products and practices while delivering a spotless, refreshing clean that enhances the well-being of our clients and their surroundings.
+        </p>
+
+        <h2 class="text-2xl font-semibold mt-8">Our Vision</h2>
+        <p class="mt-4 text-gray-700">
+            Our vision at GreenGlow Cleaners is to be the leading provider of eco-friendly cleaning services worldwide. We aspire to set the gold standard for sustainability in the cleaning industry, continually innovating to reduce our ecological footprint. Through unwavering dedication to our clients, employees, and the environment, we aim to create cleaner, greener, and healthier spaces for generations to come.
+        </p>
+    </section>
+
+    <section class="mx-4 py-8">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-semibold text-gray-800">Our Services</h2>
+            <p class="mt-2 text-gray-600">We offer a wide range of eco-friendly cleaning services.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+                <!-- Service 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <i class="fas fa-home text-3xl text-green-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-800">Residential Cleaning</h3>
+                    <p class="mt-2 text-gray-600">Transform your home with our thorough and eco-friendly residential cleaning services.</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <i class="fas fa-building text-3xl text-green-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-800">Commercial Cleaning</h3>
+                    <p class="mt-2 text-gray-600">Keep your workplace spotless and environmentally friendly with our commercial cleaning solutions.</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <i class="fas fa-couch text-3xl text-green-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-800">Deep Cleaning</h3>
+                    <p class="mt-2 text-gray-600">Our deep cleaning services ensure a thorough and sustainable cleanse of your living spaces.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="py-8">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-semibold text-gray-800">Contact Us</h2>
+            <p class="mt-2 text-gray-600">Have questions or need our services? Feel free to reach out!</p>
+    
+            <!-- CTA Button -->
+            <button id="contactCta" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 mt-4 rounded-full cursor-pointer">Get in Touch</button>
+            
+            <!-- Contact Form (hidden by default) -->
+            <form id="contactForm" class="hidden mt-6 mx-4 sm:mt-4">
+                <label for="name" class="block text-gray-800 font-semibold">Name:</label>
+                <input type="text" id="name" name="name" class="w-full sm:w-2/3 md:w-1/2 p-2 border rounded-md mt-2" required>
+            
+                <label for="email" class="block text-gray-800 font-semibold mt-4">Email:</label>
+                <input type="email" id="email" name="email" class="w-full sm:w-2/3 md:w-1/2 p-2 border rounded-md mt-2" required>
+            
+                <label for="message" class="block text-gray-800 font-semibold mt-4">Message:</label>
+                <textarea id="message" name="message" class="w-full p-2 border rounded-md mt-2" rows="4" required></textarea>
+            
+                <button type="submit" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 mt-4 rounded-full w-full sm:w-auto">Send Message</button>
+            </form>
+            
+        </div>
+    </section>    
+
+    <footer class="bg-green-500 p-4 mt-8">
+        <p class="text-center text-white">&copy; 2023 GreenGlow Cleaners</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const contactCta = document.getElementById("contactCta");
+            const contactForm = document.getElementById("contactForm");
+    
+            contactCta.addEventListener("click", function() {
+                // Toggle the visibility of the contact form
+                contactForm.classList.toggle("hidden");
+                // Scroll to the contact form if it's now visible
+                if (!contactForm.classList.contains("hidden")) {
+                    contactForm.scrollIntoView({ behavior: "smooth" });
+                }
+            });
+    
+            // Handle form submission (you can replace this with your actual form submission logic)
+            contactForm.addEventListener("submit", function(e) {
+                e.preventDefault();
+                // Replace the following with your form submission code
+                alert("Form submitted! We will get back to you soon.");
+                // Reset the form
+                contactForm.reset();
+                // Hide the form after submission
+                contactForm.classList.add("hidden");
+            });
+        });
+    </script>
+    
+</body>
+</html>
